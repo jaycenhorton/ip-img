@@ -1,0 +1,22 @@
+{
+  "name": "ip-img",
+  "version": "0.0.1",
+  "description": "ip-img",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1 -p 12345 public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaycenhorton/ip-img.git"
+  },
+  "author": "Jaycen Horton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaycenhorton/ip-img/issues"
+  },
+  "homepage": "https://github.com/jaycenhorton/ip-img#readme",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  }
+}
