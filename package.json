@@ -1,22 +1,14 @@
 {
-  "name": "ip-img",
-  "version": "0.0.1",
-  "description": "ip-img",
-  "main": "index.js",
+  "name": "transfer-files",
+  "version": "1.0.0",
   "scripts": {
-    "start": "http-server -c-1 -p 12345 public"
+    "check-bundle": "test -f ../../dist/index.js && npm run copy-bundle || (echo \"js-ipfs dist file not found, go up two dirs and run 'npm run build' first\" && exit 1)",
+    "copy-bundle": "cp ../../dist/index.js ./public/js/ipfs.js",
+    "serve": "http-server -c-1 -p 12345 public",
+    "start": "npm run check-bundle && npm run serve"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jaycenhorton/ip-img.git"
-  },
-  "author": "Jaycen Horton",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jaycenhorton/ip-img/issues"
-  },
-  "homepage": "https://github.com/jaycenhorton/ip-img#readme",
-  "dependencies": {
+  "devDependencies": {
     "http-server": "^0.10.0"
   }
 }
